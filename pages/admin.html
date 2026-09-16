@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบหลังบ้าน Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="admin-shell">
+        <div class="panel" style="margin-bottom:20px;">
+            <div class="panel-header">
+                <div class="panel-title">ระบบหลังบ้านจัดการข้อมูลเว็บ</div>
+                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+                    <span id="admin-user-badge"
+                        style="font-size:0.82rem;color:var(--muted);font-weight:700;">Admin</span>
+                    <button id="logout-btn" type="button" class="secondary-btn"
+                        style="padding:10px 14px;">ออกจากระบบ</button>
+                    <a href="../index.html" class="admin-link"
+                        style="color:var(--primary);background:#eef2ff;border:1px solid rgba(91,33,182,0.08);">
+                        <i class="fa fa-home"></i> กลับหน้าแรก
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <form id="site-settings-form" class="admin-form-card" style="margin-bottom:22px;">
+            <div class="panel-header">
+                <div class="panel-title">ตั้งค่าเว็บไซต์และธีม</div>
+            </div>
+            <div class="form-grid">
+                <div class="field">
+                    <label for="site_title">ชื่อเว็บไซต์</label>
+                    <input id="site_title" name="site_title" type="text">
+                </div>
+                <div class="field">
+                    <label for="site_subtitle">คำอธิบายเว็บ</label>
+                    <input id="site_subtitle" name="site_subtitle" type="text">
+                </div>
+                <div class="field">
+                    <label for="site_theme">ธีมเว็บไซต์</label>
+                    <select id="site_theme" name="site_theme">
+                        <option value="aurora">Aurora</option>
+                        <option value="sunset">Sunset</option>
+                        <option value="forest">Forest</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="site_primary">สีหลัก</label>
+                    <input id="site_primary" name="site_primary" type="color">
+                </div>
+                <div class="field">
+                    <label for="site_secondary">สีรอง</label>
+                    <input id="site_secondary" name="site_secondary" type="color">
+                </div>
+                <div class="field">
+                    <label for="site_accent">สีเน้น</label>
+                    <input id="site_accent" name="site_accent" type="color">
+                </div>
+                <div class="field">
+                    <label for="site_bg">พื้นหลัง</label>
+                    <input id="site_bg" name="site_bg" type="color">
+                </div>
+                <div class="field">
+                    <label for="site_text">สีข้อความ</label>
+                    <input id="site_text" name="site_text" type="color">
+                </div>
+            </div>
+            <div class="actions">
+                <button class="primary-btn" type="submit">บันทึกธีม</button>
+            </div>
+        </form>
+
+        <form id="admin-form" class="admin-form-card" style="margin-bottom:22px;">
+            <div class="panel-header">
+                <div class="panel-title">ข้อมูลส่วนตัว / โรงเรียน / ครู</div>
+            </div>
+            <div class="form-grid">
+                <div class="field">
+                    <label for="owner_fullname">ชื่อ-นามสกุล</label>
+                    <input id="owner_fullname" name="owner_fullname" type="text">
+                </div>
+                <div class="field">
+                    <label for="owner_nickname">ชื่อเล่น / คำเรียก</label>
+                    <input id="owner_nickname" name="owner_nickname" type="text">
+                </div>
+                <div class="field">
+                    <label for="owner_position">ตำแหน่ง</label>
+                    <input id="owner_position" name="owner_position" type="text">
+                </div>
+                <div class="field">
+                    <label for="owner_position_level">ระดับตำแหน่ง</label>
+                    <input id="owner_position_level" name="owner_position_level" type="text">
+                </div>
+                <div class="field">
+                    <label for="owner_school">โรงเรียน</label>
+                    <input id="owner_school" name="owner_school" type="text">
+                </div>
+                <div class="field">
+                    <label for="owner_area">เขต / สำนักงานเขต</label>
+                    <input id="owner_area" name="owner_area" type="text">
+                </div>
+                <div class="field">
+                    <label for="owner_subject">วิชา</label>
+                    <input id="owner_subject" name="owner_subject" type="text">
+                </div>
+                <div class="field">
+                    <label for="owner_grade_level">ระดับชั้นที่สอน</label>
+                    <input id="owner_grade_level" name="owner_grade_level" type="text">
+                </div>
+                <div class="field">
+                    <label for="owner_year">ปีการศึกษา</label>
+                    <input id="owner_year" name="owner_year" type="text">
+                </div>
+                <div class="field">
+                    <label for="owner_phone">เบอร์โทรศัพท์</label>
+                    <input id="owner_phone" name="owner_phone" type="text">
+                </div>
+                <div class="field">
+                    <label for="owner_email">อีเมล</label>
+                    <input id="owner_email" name="owner_email" type="email">
+                </div>
+                <div class="field">
+                    <label for="owner_profile_image">ลิงก์ภาพโปรไฟล์</label>
+                    <input id="owner_profile_image" name="owner_profile_image" type="url">
+                </div>
+                <div class="field">
+                    <label for="owner_cover_image">ลิงก์ภาพหน้าปก</label>
+                    <input id="owner_cover_image" name="owner_cover_image" type="url">
+                </div>
+                <div class="field">
+                    <label for="profile-upload">อัปโหลดภาพโปรไฟล์</label>
+                    <input id="profile-upload" type="file" accept="image/*">
+                </div>
+                <div class="field">
+                    <label for="cover-upload">อัปโหลดภาพหน้าปก</label>
+                    <input id="cover-upload" type="file" accept="image/*">
+                </div>
+                <div class="field" style="grid-column:1 / -1;">
+                    <label for="owner_bio">คำอธิบายตัวเอง</label>
+                    <textarea id="owner_bio" name="owner_bio"></textarea>
+                </div>
+                <div class="field" style="grid-column:1 / -1;">
+                    <label for="owner_quote">ข้อความสั้น</label>
+                    <textarea id="owner_quote" name="owner_quote"></textarea>
+                </div>
+
+                <div class="field">
+                    <label for="stats_awards">จำนวนรางวัล</label>
+                    <input id="stats_awards" name="stats_awards" type="number">
+                </div>
+                <div class="field">
+                    <label for="stats_documents_pa">จำนวนเอกสาร PA</label>
+                    <input id="stats_documents_pa" name="stats_documents_pa" type="number">
+                </div>
+                <div class="field">
+                    <label for="stats_teaching_works">จำนวนผลงานสอน</label>
+                    <input id="stats_teaching_works" name="stats_teaching_works" type="number">
+                </div>
+                <div class="field">
+                    <label for="stats_best_practice">จำนวนแนวปฏิบัติ</label>
+                    <input id="stats_best_practice" name="stats_best_practice" type="number">
+                </div>
+                <div class="field">
+                    <label for="stats_dev_activities">จำนวนการพัฒนาตนเอง</label>
+                    <input id="stats_dev_activities" name="stats_dev_activities" type="number">
+                </div>
+                <div class="field">
+                    <label for="stats_progress_pa">ความคืบหน้า PA (%)</label>
+                    <input id="stats_progress_pa" name="stats_progress_pa" type="number" min="0" max="100">
+                </div>
+
+                <div class="field">
+                    <label for="eval_score">ผลคะแนนล่าสุด</label>
+                    <input id="eval_score" name="eval_score" type="text">
+                </div>
+                <div class="field">
+                    <label for="eval_term">ภาคเรียน / ปี</label>
+                    <input id="eval_term" name="eval_term" type="text">
+                </div>
+                <div class="field" style="grid-column:1 / -1;">
+                    <label for="eval_summary">สรุปผลการประเมิน</label>
+                    <textarea id="eval_summary" name="eval_summary"></textarea>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button class="primary-btn" type="submit">บันทึกข้อมูล</button>
+                <button id="reset-default" class="secondary-btn" type="button">คืนค่าเริ่มต้น</button>
+                <button id="export-config" class="secondary-btn" type="button">ดาวน์โหลด config.json</button>
+            </div>
+            <div id="save-toast" class="toast">บันทึกข้อมูลสำเร็จ</div>
+        </form>
+
+        <form id="portfolio-form" class="admin-form-card">
+            <div class="panel-header">
+                <div class="panel-title">เพิ่ม/แก้ไขผลงานที่แสดงหน้าเว็บ</div>
+            </div>
+            <div class="form-grid">
+                <input type="hidden" id="card_id" name="card_id">
+                <div class="field">
+                    <label for="card_title">หัวข้อ</label>
+                    <input id="card_title" name="card_title" type="text" placeholder="เช่น ผลงานด้านนวัตกรรมการศึกษา">
+                </div>
+                <div class="field">
+                    <label for="card_category">ประเภท</label>
+                    <select id="card_category" name="card_category">
+                        <option value="รางวัล">รางวัล</option>
+                        <option value="การสอน">การสอน</option>
+                        <option value="Best Practice">Best Practice</option>
+                        <option value="พัฒนาตนเอง">พัฒนาตนเอง</option>
+                        <option value="Portfolio">Portfolio</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="card_layout">รูปแบบการแสดง</label>
+                    <select id="card_layout" name="card_layout">
+                        <option value="regular">ปกติ</option>
+                        <option value="tall">ใหญ่ / ปก</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="card_image">ลิงก์ภาพผลงาน</label>
+                    <input id="card_image" name="card_image" type="url">
+                </div>
+                <div class="field">
+                    <label for="portfolio-image-upload">อัปโหลดภาพผลงาน</label>
+                    <input id="portfolio-image-upload" type="file" accept="image/*">
+                </div>
+                <div class="field" style="display:flex;align-items:center;gap:10px;min-height:44px;">
+                    <input id="card_featured" name="card_featured" type="checkbox">
+                    <label for="card_featured" style="margin:0;">แสดงบนหน้าแรก</label>
+                </div>
+                <div class="field" style="grid-column:1 / -1;">
+                    <label for="card_description">คำอธิบาย</label>
+                    <textarea id="card_description" name="card_description"></textarea>
+                </div>
+            </div>
+            <div class="actions">
+                <button type="submit" class="primary-btn" id="card_submit">เพิ่มผลงาน</button>
+            </div>
+            <div id="portfolio-card-list" class="portfolio-card-list" style="margin-top:22px;"></div>
+        </form>
+    </div>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลส่วนตัว</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#5B21B6', secondary: '#EC4899' } } } }</script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="page-shell">
+        <div class="floating-shell">
+            <aside class="sidebar">
+                <div class="sidebar-inner">
+                    <div class="brand">
+                        <div class="brand-mark">P</div>
+                        <div class="brand-text">Portfolio Teacher</div>
+                    </div>
+
+                    <div class="profile-box">
+                        <img data-img="profile" src="../assets/images/profile.jpg" alt="profile">
+                        <div>
+                            <h3 data-field="fullname">นายณัฎฐชัย มาตา</h3>
+                            <p data-field="position">ครูชำนาญการ</p>
+                        </div>
+                    </div>
+
+                    <nav class="side-nav">
+                        <a href="../index.html"><i class="fa fa-tachometer"></i> ภาพรวม</a>
+                        <a href="awards.html"><i class="fa fa-trophy"></i> รางวัล</a>
+                        <a href="documents.html"><i class="fa fa-file-text"></i> เอกสาร PA</a>
+                        <a href="best-practice.html"><i class="fa fa-lightbulb-o"></i> แนวปฏิบัติ</a>
+                        <a href="teaching.html"><i class="fa fa-book"></i> ผลงานสอน</a>
+                        <a href="development.html"><i class="fa fa-graduation-cap"></i> พัฒนาตนเอง</a>
+                        <a href="evaluation.html"><i class="fa fa-check-square-o"></i> ผลการประเมิน</a>
+                        <a href="profile.html" class="active"><i class="fa fa-user"></i> ข้อมูลส่วนตัว</a>
+                        <a href="admin.html"><i class="fa fa-cogs"></i> ตั้งค่าข้อมูล</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <main class="main-panel">
+                <section class="hero-panel" data-cover="hero">
+                    <div class="hero-inner">
+                        <div class="hero-copy">
+                            <span class="eyebrow"><i class="fa fa-user"></i> <span
+                                    data-field="position_level">ครูชำนาญการพิเศษ</span></span>
+                            <h1>ข้อมูลส่วนตัว</h1>
+                            <p>ประวัติ ข้อมูลพื้นฐาน และรายละเอียดที่ใช้อ้างอิงในงานประเมินครู</p>
+                        </div>
+                        <div class="hero-actions">
+                            <div class="hero-badge">
+                                <span>ปีการศึกษา</span>
+                                <strong data-field="year">2569</strong>
+                            </div>
+                            <div class="theme-switcher">
+                                <button class="theme-btn active" data-theme-btn="aurora" type="button">Aurora</button>
+                                <button class="theme-btn" data-theme-btn="sunset" type="button">Sunset</button>
+                                <button class="theme-btn" data-theme-btn="forest" type="button">Forest</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="detail-stack">
+                    <div class="panel">
+                        <div class="panel-header">
+                            <div class="panel-title">ข้อมูลส่วนตัว</div>
+                        </div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <img data-img="profile" src="../assets/images/profile.jpg" alt="ภาพโปรไฟล์ครู"
+                                class="w-20 h-20 rounded-full object-cover border-4 border-primary/10">
+                            <div>
+                                <h3 class="text-2xl font-bold" data-field="fullname">นายณัฏฐชัย มาตา</h3>
+                                <p class="text-gray-600" data-field="position_level">ชำนาญการพิเศษ</p>
+                            </div>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-4 text-sm">
+                            <div class="info-badge"><span class="label">ตำแหน่ง</span><strong
+                                    data-field="position">ครูชำนาญการ</strong></div>
+                            <div class="info-badge"><span class="label">วิชา/ชั้น</span><strong><span
+                                        data-field="subject">วิทยาศาสตร์</span> / <span
+                                        data-field="grade">มัธยมศึกษาปีที่ 4–6</span></strong></div>
+                            <div class="info-badge"><span class="label">โรงเรียน</span><strong
+                                    data-field="school">โรงเรียนสวนกุหลาบวิทยาลัย</strong></div>
+                            <div class="info-badge"><span class="label">พื้นที่</span><strong
+                                    data-field="area">สำนักงานเขตพื้นที่การศึกษามัธยมศึกษา กรุงเทพมหานคร</strong></div>
+                            <div class="info-badge"><span class="label">โทรศัพท์</span><strong
+                                    data-field="phone">0xx-xxxxxxx</strong></div>
+                            <div class="info-badge"><span class="label">อีเมล</span><strong
+                                    data-field="email">teacher@example.com</strong></div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

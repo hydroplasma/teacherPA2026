@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5B21B6',
+                        secondary: '#EC4899'
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="page-shell">
+        <div class="floating-shell" style="justify-content:center;">
+            <main class="main-panel" style="max-width:560px; margin:0 auto;">
+                <section class="hero-panel" data-cover="hero">
+                    <div class="hero-inner">
+                        <div class="hero-copy">
+                            <span class="eyebrow"><i class="fa fa-lock"></i> Admin Portal</span>
+                            <h1>เข้าสู่ระบบจัดการข้อมูล</h1>
+                            <p>ใช้งาน Supabase Auth เพื่อยืนยันสิทธิ์ก่อนเข้าหน้า Admin</p>
+                        </div>
+                        <div class="hero-actions">
+                            <div class="hero-badge">
+                                <span>System</span>
+                                <strong>Login</strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="panel" style="margin-top:20px;">
+                    <div class="panel-header">
+                        <div class="panel-title">เข้าสู่ระบบ</div>
+                    </div>
+
+                    <form id="login-form" class="space-y-4">
+                        <div class="field">
+                            <label for="login-email">อีเมล</label>
+                            <input id="login-email" type="email" placeholder="admin@school.ac.th" required>
+                        </div>
+                        <div class="field">
+                            <label for="login-password">รหัสผ่าน</label>
+                            <input id="login-password" type="password" placeholder="กรอกรหัสผ่าน" required>
+                        </div>
+
+                        <div id="login-message" class="toast show" style="display:none; margin-top:0;"></div>
+
+                        <button type="submit" class="primary-btn" style="width:100%;">เข้าสู่ระบบ</button>
+                    </form>
+
+                    <div class="mt-4 text-sm text-gray-600">
+                        <strong>รหัสทดสอบระบบ:</strong><br>
+                        อีเมล: <span class="font-semibold text-primary">admin@demo.local</span><br>
+                        รหัสผ่าน: <span class="font-semibold text-primary">AdminTest123!</span>
+                    </div>
+                    <div class="mt-2 text-xs text-gray-500">
+                        หากต้องการใช้งานแบบ Supabase จริง ให้ตั้งค่า .env ก่อนใช้งานต่อไป
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="../assets/js/auth.js"></script>
+</body>
+
+</html>

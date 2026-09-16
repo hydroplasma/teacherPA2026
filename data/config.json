@@ -1,0 +1,83 @@
+{
+  "site": {
+    "title": "Live Test Title",
+    "subtitle": "ผลงานและความก้าวหน้าของครูผู้สอน",
+    "welcome": "สวัสดีครับ/ค่ะ",
+    "theme": "aurora",
+    "themeColors": {
+      "primary": "#5b21b6",
+      "secondary": "#ec4899",
+      "accent": "#7c3aed",
+      "bg": "#f4f7fb",
+      "text": "#14213d"
+    }
+  },
+  "owner": {
+    "fullname": "นางสาวภาวดี ชูสกุล",
+    "nickname": "อาจารย์ภาวดี",
+    "position": "ครูวิทยาศาสตร์",
+    "position_level": "ครูชำนาญการพิเศษ",
+    "school": "โรงเรียนสตรีศรีน่าน",
+    "area": "สำนักงานเขตพื้นที่การศึกษามัธยมศึกษา เขต 1",
+    "subject": "วิทยาศาสตร์",
+    "grade_level": "มัธยมศึกษาปีที่ 1–6",
+    "year": "2569",
+    "phone": "081-234-5678",
+    "email": "pavadee.teacher@school.ac.th",
+    "profile_image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80",
+    "cover_image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80",
+    "bio": "ครูวิทยาศาสตร์ที่ให้ความสำคัญกับการจัดการเรียนรู้เชิงรุก เพื่อช่วยให้ผู้เรียนมีความรู้ ความเข้าใจ และสามารถนำไปประยุกต์ใช้ได้จริงในชีวิตประจำวัน",
+    "quote": "เรียนรู้เพื่อสร้างคนเก่งและมีคุณค่า"
+  },
+  "stats": {
+    "awards": 9,
+    "documents_pa": 6,
+    "teaching_works": 32,
+    "best_practice": 3,
+    "dev_activities": 14,
+    "progress_pa": 76
+  },
+  "evaluation": {
+    "latest_score": "4.70 / 5.00",
+    "latest_term": "ภาคเรียนที่ 2 ปี 2568",
+    "summary": "มีผลการประเมินอยู่ในระดับดีเยี่ยม โดยเฉพาะด้านการจัดการเรียนรู้ การใช้เทคโนโลยี และการส่งเสริมความร่วมมือของผู้เรียน"
+  },
+  "portfolioCards": [
+    {
+      "id": "card-1",
+      "title": "ผลงานด้านนวัตกรรมการศึกษา",
+      "category": "รางวัล",
+      "description": "สร้างสรรค์กิจกรรม STEM ที่ช่วยให้ผู้เรียนพัฒนาทักษะและความคิดสร้างสรรค์",
+      "image": "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&q=80",
+      "featured": true,
+      "layout": "tall"
+    },
+    {
+      "id": "card-2",
+      "title": "การออกแบบบทเรียนเชิงรุก",
+      "category": "การสอน",
+      "description": "ออกแบบกระบวนการสอนที่ให้ผู้เรียนมีส่วนร่วมและฝึกทักษะจริง",
+      "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
+      "featured": true,
+      "layout": "regular"
+    },
+    {
+      "id": "card-3",
+      "title": "AI Learning Coach",
+      "category": "Best Practice",
+      "description": "ใช้ข้อมูลการเรียนรู้เพื่อสร้างแผนการพัฒนาผู้เรียนรายบุคคล",
+      "image": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80",
+      "featured": true,
+      "layout": "regular"
+    },
+    {
+      "id": "card-4",
+      "title": "อบรมและพัฒนาอย่างต่อเนื่อง",
+      "category": "พัฒนาตนเอง",
+      "description": "เข้าร่วมกิจกรรมพัฒนาวิชาชีพและการเรียนรู้ด้านเทคโนโลยี",
+      "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=900&q=80",
+      "featured": true,
+      "layout": "regular"
+    }
+  ]
+}

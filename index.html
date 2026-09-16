@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แฟ้มสะสมผลงานครู</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#5B21B6',
+                        secondary: '#EC4899',
+                        success: '#10B981',
+                        warning: '#F59E0B'
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="page-shell">
+        <div class="floating-shell">
+            <aside class="sidebar">
+                <div class="sidebar-inner">
+                    <div class="brand">
+                        <div class="brand-mark">P</div>
+                        <div class="brand-text">Portfolio Teacher</div>
+                    </div>
+
+                    <div class="profile-box">
+                        <img data-img="profile" src="assets/images/profile.jpg" alt="profile">
+                        <div>
+                            <h3 data-field="fullname">นางสาวภาวดี ชูสกุล</h3>
+                            <p data-field="position">ครูวิทยาศาสตร์</p>
+                        </div>
+                    </div>
+
+                    <nav class="side-nav">
+                        <a href="index.html" class="active"><i class="fa fa-tachometer"></i> ภาพรวม</a>
+                        <a href="pages/awards.html"><i class="fa fa-trophy"></i> รางวัล</a>
+                        <a href="pages/documents.html"><i class="fa fa-file-text"></i> เอกสาร PA</a>
+                        <a href="pages/best-practice.html"><i class="fa fa-lightbulb-o"></i> แนวปฏิบัติ</a>
+                        <a href="pages/teaching.html"><i class="fa fa-book"></i> ผลงานสอน</a>
+                        <a href="pages/development.html"><i class="fa fa-graduation-cap"></i> พัฒนาตนเอง</a>
+                        <a href="pages/evaluation.html"><i class="fa fa-check-square-o"></i> ผลการประเมิน</a>
+                        <a href="pages/profile.html"><i class="fa fa-user"></i> ข้อมูลส่วนตัว</a>
+                        <a href="pages/login.html"><i class="fa fa-cogs"></i> เข้าสู่ระบบ Admin</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <main class="main-panel">
+                <section class="hero-panel" data-cover="hero">
+                    <div class="hero-inner">
+                        <div class="hero-copy">
+                            <span class="eyebrow"><i class="fa fa-star"></i> <span
+                                    data-field="position_level">ครูชำนาญการพิเศษ</span></span>
+                            <h1><span data-field="nickname">อาจารย์ภาวดี</span> <span
+                                    class="new-line">ผลงานครูที่พร้อมสู่การประเมิน</span></h1>
+                            <p data-field="bio">ครูวิทยาศาสตร์ที่ให้ความสำคัญกับการจัดการเรียนรู้เชิงรุก ...</p>
+                        </div>
+                        <div class="hero-actions">
+                            <div class="hero-badge">
+                                <span>ปีการศึกษา</span>
+                                <strong data-field="year">2569</strong>
+                            </div>
+                            <div class="theme-switcher">
+                                <button class="theme-btn active" data-theme-btn="aurora" type="button">Aurora</button>
+                                <button class="theme-btn" data-theme-btn="sunset" type="button">Sunset</button>
+                                <button class="theme-btn" data-theme-btn="forest" type="button">Forest</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">รางวัล</div>
+                        <div class="stat-value text-primary" data-stat="awards">9</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">เอกสาร PA</div>
+                        <div class="stat-value text-success" data-stat="documents">6</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">ผลงานสอน</div>
+                        <div class="stat-value text-warning" data-stat="teaching">32</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">แนวปฏิบัติ</div>
+                        <div class="stat-value text-secondary" data-stat="best">3</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">พัฒนาตนเอง</div>
+                        <div class="stat-value text-blue-500" data-stat="dev">14</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">PA Progress</div>
+                        <div class="stat-value text-purple-700" data-progress-label="pa">76%</div>
+                    </div>
+                </section>
+
+                <section class="grid-two">
+                    <div class="panel">
+                        <div class="panel-header">
+                            <div class="panel-title">ความคืบหน้าการประเมิน PA</div>
+                            <a href="pages/admin.html" class="admin-link"><i class="fa fa-cog"></i> จัดการข้อมูล</a>
+                        </div>
+                        <div class="progress-wrap">
+                            <div class="progress-bar"><span data-progress="pa" style="width:76%"></span></div>
+                            <div class="text-sm text-gray-600" data-progress-label="pa">76%</div>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-header">
+                            <div class="panel-title">ข้อมูลสำคัญ</div>
+                        </div>
+                        <div class="quick-grid">
+                            <div class="info-badge">
+                                <span class="label">วิชา</span>
+                                <strong data-field="subject">วิทยาศาสตร์</strong>
+                            </div>
+                            <div class="info-badge">
+                                <span class="label">ระดับชั้น</span>
+                                <strong data-field="grade">มัธยมศึกษาปีที่ 1–6</strong>
+                            </div>
+                            <div class="info-badge">
+                                <span class="label">โรงเรียน</span>
+                                <strong data-field="school">โรงเรียนสตรีศรีน่าน</strong>
+                            </div>
+                            <div class="info-badge">
+                                <span class="label">พื้นที่</span>
+                                <strong data-field="area">สำนักงานเขตพื้นที่การศึกษามัธยมศึกษา เขต 1</strong>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="portfolio-showcase">
+                    <div class="section-header">
+                        <div>
+                            <p class="section-kicker">Featured Portfolio</p>
+                            <h2>ผลงานเด่นและประสบการณ์</h2>
+                        </div>
+                        <a href="pages/profile.html" class="inline-link">ดูข้อมูลเพิ่มเติม <i
+                                class="fa fa-arrow-right"></i></a>
+                    </div>
+                    <div id="featured-portfolio-list" class="portfolio-grid"></div>
+                </section>
+
+                <section class="grid-two">
+                    <div class="panel">
+                        <div class="panel-header">
+                            <div class="panel-title">ข้อมูลส่วนตัว</div>
+                        </div>
+                        <div class="space-y-3">
+                            <p><strong>ชื่อ:</strong> <span data-field="fullname">นางสาวภาวดี ชูสกุล</span></p>
+                            <p><strong>ตำแหน่ง:</strong> <span data-field="position">ครูวิทยาศาสตร์</span> / <span
+                                    data-field="position_level">ครูชำนาญการพิเศษ</span></p>
+                            <p><strong>อีเมล:</strong> <span data-field="email">pavadee.teacher@school.ac.th</span></p>
+                            <p><strong>โทรศัพท์:</strong> <span data-field="phone">081-234-5678</span></p>
+                            <p><strong>สรุป:</strong> <span
+                                    data-field="quote">เรียนรู้เพื่อสร้างคนเก่งและมีคุณค่า</span></p>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-header">
+                            <div class="panel-title">ผลการประเมินล่าสุด</div>
+                        </div>
+                        <div id="eval-score" class="stat-value text-primary" style="font-size:1.9rem;">4.70 / 5.00</div>
+                        <div class="mt-3 text-sm text-gray-600" id="eval-term">ภาคเรียนที่ 2 ปี 2568</div>
+                        <p class="mt-3 text-gray-700" id="eval-summary">มีผลการประเมินอยู่ในระดับดีเยี่ยม ...</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
