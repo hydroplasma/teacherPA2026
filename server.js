@@ -234,12 +234,22 @@ async function getConfigFromSupabase() {
             return defaults;
         }
 
-        try {
-            return JSON.parse(data.value || '{}');
-        } catch (parseError) {
-            console.warn('Invalid config payload in Supabase, falling back to default configuration.', parseError);
-            return readConfig();
+        // Supabase returns jsonb as an object. Older deployments may return a
+        // JSON string, so support both forms without parsing an object twice.
+        const value = data.value;
+        if (value && typeof value === 'object') {
+            return normalizeConfig(value);
         }
+
+        if (typeof value === 'string') {
+            try {
+                return normalizeConfig(JSON.parse(value));
+            } catch (parseError) {
+                console.warn('Invalid config payload in Supabase, falling back to default configuration.', parseError);
+            }
+        }
+
+        return readConfig();
     } catch (error) {
         console.warn('Supabase config read failed, using JSON fallback:', error.message || error);
         return readConfig();
@@ -364,6 +374,7 @@ app.post('/api/auth/logout', requireAuth, async (req, res) => {
 app.get('/api/config', async (req, res) => {
     try {
         const data = await getConfigFromSupabase();
+        res.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
         res.json({ success: true, data });
     } catch (error) {
         console.error('Failed to read config:', error);
